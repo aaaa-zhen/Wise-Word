@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1 id="selected-text"> Myself</h1>
+    <audio id="audioResult" controls></audio>
+    <div class="sound-section"> 
+        <svg id="playSoundSvg" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.51122 12.4398V1.4311C9.51122 1.00482 9.27934 0.612294 8.90599 0.406571C8.46529 0.163735 7.91867 0.229934 7.54867 0.570953L4.36531 3.50501C3.88484 3.94786 3.25534 4.19371 2.60192 4.19371C1.16492 4.19371 0 5.35863 0 6.79563V7.64449C0 9.11446 1.19165 10.3061 2.66162 10.3061C3.27992 10.3061 3.87893 10.5214 4.3558 10.9149L7.40579 13.4321C7.85534 13.8031 8.49816 13.8255 8.97247 13.4867C9.31057 13.2452 9.51122 12.8553 9.51122 12.4398Z" fill="#232323"/>
+            <path d="M11.4573 4.66417C12.3164 5.12781 12.9068 6.0294 12.9244 7.07498C12.9412 8.07445 12.4306 8.96005 11.6491 9.46622" stroke="#232323" stroke-width="1.68" stroke-linecap="round"/>
+            <path d="M13.047 2.73345C14.7136 3.43935 15.8953 5.07664 15.9278 7.00287C15.9597 8.90006 14.8679 10.5547 13.2663 11.3318" stroke="#232323" stroke-width="1.68" stroke-linecap="round"/>
+        </svg>
+          
+            <button id="playSoundIcon">生成音频</button>
+    </div>
+    <p class="definition">Definition</p>
+    <div>
+        <h3 id="translationResult"></h3>
+        <button id="generatedefinton">Generate</button>
+    </div>
+
+    <p class="sentence">sentence</p>
+    <div>
+        <h3 id="sentenceResult"></h3>
+        <button id="generatesenten">Try More Funny</button>
+    </div>
+
+    <div>
+        <button id="makechinese">生成中文</button>
+        <div>
+            <h3 id="chineseResult"></h3>
+        </div>
+    </div>
+
+   
+    <script src="script.js"></script> <!-- 外部引入JavaScript -->
+    <script src="content.js"></script>
+</body>
+</html>

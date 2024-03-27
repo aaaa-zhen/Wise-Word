@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+/* 在popup.html内部的样式标签中或者在外部的CSS文件中 */
+body {
+ padding: 14px;
+ font-family: 'Inter', sans-serif;
+}
+/* 滚动条的整体部分 */
+::-webkit-scrollbar {
+    width: 4px;
+    opacity: 0; /* 默认设置为透明 */
+    transition: opacity 0.5s ease; /* 平滑过渡效果 */
+}
+
+/* 当滚动条父容器:hover时，显示滚动条 */
+::-webkit-scrollbar:hover,
+.scrollableElement:hover::-webkit-scrollbar,
+.scrollableElement:active::-webkit-scrollbar {
+    opacity: 1; /* 鼠标悬停时显示滚动条 */
+}
+
+/* 滚动条内部的滑动部分 */
+::-webkit-scrollbar-thumb {
+    background-color: #DDD;
+    border-radius: 2px;
+}
+
+/* 滚动条内部的轨道 */
+::-webkit-scrollbar-track {
+    background-color: #FFF; /* 滚动条轨道的颜色 */
+    border-radius: 0; /* 滚动条轨道的圆角 */
+}
+
+/* 当滑动部分活动时 */
+::-webkit-scrollbar-thumb:active {
+    background-color: #AAA; /* 滚动条滑块:active 的颜色 */
+}
+
+#selected-text {
+    font-size: 34px;
+    font-family: 'Brygada 1918', serif; /* 确保您已经正确地引入了'Brygada 1918'字体 */
+    font-weight: bold;
+    color: #232323;
+}
+.sound-section {
+    margin-top: 0.15rem; /* 大约等于10px，假设根字体大小为16px */
+    margin-bottom: 1rem; /* 大约等于15px */
+}
+
+.sound-section svg {
+    width: 1.2rem;
+    height: 1rem; 
+    cursor: pointer; /* 将鼠标光标改为指针形状，指示可点击 */ 
+}
+#playSoundSvg {
+    transition: opacity 500ms ease-in-out;
+}
+
+#playSoundSvg:active {
+    opacity: 0.6;
+}
+
+
+
+p.definition {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; /* 使用 bold 字体 */
+    font-size: 10px;
+    color: #171717;
+    background-color: #FFD27D;
+    padding: 6px 10px; /* 垂直和水平内边距 */
+    border-radius: 20px; /* 圆角的大小 */
+    display: inline-block;
+    margin: 0; 
+
+}
+h3#translationResult {
+    font-family: 'Buenard', serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #232323;
+    line-height: 1.6; /* 这将会是字体大小的1.6倍 */
+    background-color: #FFFFFF; /* 根据您的截图，背景颜色看起来是浅灰色 */
+    padding: 12px;
+    border-radius: 10px; /* 提供圆角 */
+    margin-top: 20px; /* 根据需要调整 */
+    width: calc(100% - 2px); /* 计算宽度以留出边距，如果有必要 */
+    box-sizing: border-box; /* 确保内边距不会影响总宽度 */
+}
+h3#chineseResult{
+    font-family: 'Inter', serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #232323;
+    line-height: 1.6; /* 这将会是字体大小的1.6倍 */
+    padding: 12px;
+    border-radius: 10px; /* 提供圆角 */
+    margin-top: 20px; /* 根据需要调整 */
+    width: calc(100% - 2px); /* 计算宽度以留出边距，如果有必要 */
+    box-sizing: border-box; /* 确保内边距不会影响总宽度 */
+}
+p.sentence {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; /* 使用 bold 字体 */
+    font-size: 10px;
+    color: #131A37;
+    background-color: #A9BCFF;
+    padding: 6px 10px; /* 垂直和水平内边距 */
+    border-radius: 20px; /* 圆角的大小 */
+    display: inline-block;
+    margin: 0; 
+}
+
+h3#sentenceResult {
+    font-family: 'Buenard', serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #232323;
+    line-height: 1.4; /* 这将会是字体大小的1.6倍 */
+    background-color: #E8EDFF; /* 根据您的截图，背景颜色看起来是浅灰色 */
+    padding: 12px;
+    border-radius: 10px; /* 提供圆角 */
+    margin-top: 20px; /* 根据需要调整 */
+    width: calc(100% - 2px); /* 计算宽度以留出边距，如果有必要 */
+    box-sizing: border-box; /* 确保内边距不会影响总宽度 */
+}
+
+#generatesenten,
+#generatedefinton,
+#audioResult,
+#playSoundIcon
+{
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+#makechinese {
+    background-color: #4394EC; /* 按钮背景颜色 */
+    color: white; /* 文本颜色 */
+    padding: 10px 20px; /* 内边距，确保在宽度最大时文本两侧有足够空间 */
+    height: 52px; /* 按钮高度 */
+    width: 280px;
+    border: none; /* 无边框 */
+    border-radius: 12px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时的光标样式 */
+    font-size: 14px; /* 字体大小 */
+    font-family: 'Inter', sans-serif; /* 字体家族 */
+    font-weight: bold; /* 字体粗细 */
+    transition: transform 0.2s ease; /* 过渡效果，使点击效果更平滑 */
+    box-sizing: border-box; /* 确保边框和内边距不会增加按钮大小 */
+}
+
+#makechinese:active {
+    transform: scale(0.98); /* 点击时缩小到95% */
+}
+
+#makechinese:focus {
+    outline: none; /* 移除焦点时的轮廓 */
+}
